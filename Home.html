@@ -36,6 +36,10 @@ Icon credit:
 	<head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="http://www.iconj.com/ico/4/7/477njo1f13.ico" type="image/x-icon" />
 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" ></script> 
@@ -142,6 +146,18 @@ Icon credit:
 		margin-top: 45vh;
 	}
 
+	.return {
+		width: 80px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.see-results {
+		width: 100%;
+		min-height: 100vh;
+		background-color: #4ee6a7;
+	}
+
 	/* Arrow */
 
 	.arrow {
@@ -230,6 +246,24 @@ Icon credit:
 		width: 100px;
 	}
 
+div.panel {
+		margin: auto;
+		margin-top: 20px;
+		border-style: none;
+		font-family: 'Roboto Slab', serif;
+	}
+
+
+	div.panel-body {
+		background-color:#ededed;
+		
+	}
+	
+	div.panel-heading {
+		background-color:#4ee6a7; 
+
+	}
+
 	</style>
 
 	</head>
@@ -237,7 +271,7 @@ Icon credit:
 	<body style="margin: 0;">
 
 		<!-- Home -->
-		<div class="page home">
+		<div class="page" id="home">
 
 			<div class="container">
 				<div class="row">
@@ -252,7 +286,7 @@ Icon credit:
 										<h1>flatOut</h1>
 									</div>
 									<div class="back">
-										<p>flatOut helps you find the cheap flats you need, just enter your university, your budget and a few guesstimates of your living costs and we’ll show you the most suitable flats out there for you. Get started by clicking the arrow below!</p>
+										<p>flatOut helps you find the cheap flats you need, just enter your university, your weekly budget and a few guesstimates of your weekly living costs and we’ll show you the most suitable flats out there for you. Get started by clicking the arrow below!</p>
 									</div>
 								</div>
 							</div>
@@ -470,12 +504,50 @@ Icon credit:
 				</div>
 			</div>
 
+			</form>
+
 		</div>
 
 		<!-- See Results -->
-		<div class="page" id="see-results"></div>
+		<div class="page" id="see-results">
+			<div class="container">
+				<div class="row panel-center">
+					<h1 style="text-align:center">Your Results</h1>
+					<div class="col-md-12" >
+						<div class="panel">
+	  					<div class="panel-heading" style="color:#ededed">
+	  						Is this the flat you were looking for?
+	  					</div>
+	  					<div class="panel-body">
+	  						<table class="table">
+									<thead>
+										<tr style="border-color:#ed7a67">
+											<th style="color:#ed7a67">Rank</th>
+											<th style="color:#ed7a67">Property</th>
+											<th style="color:#ed7a67">Cost</th>
+											<th style="color:#ed7a67">Budget Left Over</th>
+											<th style="color:#ed7a67">Distance</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>	
+										</tr>
+									</tbody>
+								</table>
+	  					</div>
+		  			</div>
+	    		</div>	
+	  		</div>
+	  		<div class="row">
+					<div class="col-md-12">
+						<center><a href="#home"><img src="http://i.imgur.com/L9fHAAx.png" class="return" /></a></center>
+	  			</div>
+				</div>
+			</div>
+		</div>
 
-		</form>
+
 
 	</body>
 
