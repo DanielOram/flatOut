@@ -13,11 +13,33 @@ Nimbl - Hackfest 2015
 		Trak Gray
 -->
 
+<!--
+Icon credit: 
+	Smartphone icon by George Agpoon, 
+	Clothing icon by Anton Håkanson, 
+	Delete icon by Convoy, 
+	Shopping cart icon by Mark Wehrhahn, 
+	Wifi icon by parkjisun, 
+	Leisure icon by Javier Calvo Patiño, 
+	Power socket icon by Ryan Lerch, 
+	Backpack icon by Michael Stücker, 
+	Pizza icon by Milky, 
+	Check mark icon by Alex Auda Samora, 
+	Toiletries icon by Claire Jones, 
+	Bus icon is public domain, 
+	Wallet icon by Shcidt Sergey. 
+	All icons sourced via https://thenounproject.com/
+-->
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 	<head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" ></script> 
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
@@ -32,6 +54,14 @@ Nimbl - Hackfest 2015
 
             $(".arrow").hover(function(){
                	$(".arrow").effect( "bounce", {times:3, distance:15}, 1000 );
+            });
+
+         });
+
+                $(document).ready(function() {
+
+            $(".arrows").hover(function(){
+               	$(".arrows").effect( "bounce", {times:3, distance:15}, 1000 );
             });
 
          });
@@ -81,7 +111,55 @@ Nimbl - Hackfest 2015
 	.page {
 		width: 100%;
 		height: 100vh;
-		background-color: #4bd39b;
+		background-color: #4ee6a7;
+	}
+
+	.text-input {
+		width: 200px;
+		height: 30px;
+		background-color: #ededed;
+		border: solid 1px #ededed;
+		font-family: 'Roboto Slab', serif;
+		font-size: 18px;
+		color: #ed7a67;
+		margin-top: 45vh;
+	}
+
+	.dropdown-input {
+		width: 200px;
+		height: 30px;
+		background-color: #ededed;
+		border: solid 1px #ededed;
+		font-family: 'Roboto Slab', serif;
+		font-size: 18px;
+		color: #ed7a67;
+		margin-top: 45vh;
+	}
+
+	.icon {
+		width: 100px;
+		text-align: right;
+		margin-top: 45vh;
+	}
+
+	/* Arrow */
+
+	.arrow {
+		margin-top: calc(100vh - 100px);
+		height: 70px;
+	}
+
+	.arrows {
+		margin-top: calc(100vh - 500px);
+		height: 70px;
+	}
+
+	.front-arrow {
+		width: 100%;
+	}
+
+	.other-arrow {
+		width: 100%;
 	}
 
 	/* Flipper */
@@ -141,17 +219,15 @@ Nimbl - Hackfest 2015
 	  line-height: 14px;
 	}
 
+	.box {
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  width: 100%;
+	}
+
 	.logo {
 		width: 100px;
-	}
-
-	.arrow {
-		margin-top: calc(100vh - 100px);
-		height: 70px;
-	}
-
-	.front-arrow {
-		width: 100%;
 	}
 
 	</style>
@@ -172,7 +248,7 @@ Nimbl - Hackfest 2015
 							<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 								<div class="flipper">
 									<div class="front">
-										<center><img src="http://i.imgur.com/ly90LmB.png" class="logo" /></center>
+										<center><img src="http://i.imgur.com/UuV1Q8J.png" class="logo" /></center>
 										<h1>flatOut</h1>
 									</div>
 									<div class="back">
@@ -200,45 +276,199 @@ Nimbl - Hackfest 2015
 		<!-- University -->
 		<div class="page" id="uni">
 
-			<input type="text" name="uni" />
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/ifInGjc.png" align="right" class="icon" style="margin-top: 40vh;" />
+					</div>
+					<div class="col-md-6">
+						<select class="dropdown-input">
+							<option value="0"></option>
+							<option value="UOA">University of Auckland - City Campus</option>
+							<option value="AUT">Auckland University of Technology - City Campus</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Arrow -->
+						<div class="other-arrow">
+							<center><a href="#budget"><img src="http://i.imgur.com/VJlB2mp.png" class="arrows" /></a></center>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</div>
 
 		<!-- Budget -->
 		<div class="page" id="budget">
 
-			<input type="text" name="budget" />
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/EysQChl.png" align="right" class="icon" style="margin-top: 40vh;" />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="budget" class="text-input" placeholder="$367.70" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Arrow -->
+						<div class="other-arrow">
+							<center><a href="#essentials"><img src="http://i.imgur.com/VJlB2mp.png" class="arrows" /></a></center>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</div>
 
 		<!-- Essentials -->
 		<div class="page" id="essentials">
 
-			<input type="text" name="power" />
-			<input type="text" name="transport" />
-			<input type="text" name="toiletries" />
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/It77T8T.png" align="right" class="icon" style="margin-top: 15vh;" />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="power" class="text-input" placeholder="$15.10" style="margin-top: 20vh;" />
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/hQOQtxM.png" align="right" class="icon" style="margin-top: 0vh;" />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="transport" class="text-input" placeholder="$40.85" style="margin-top: 5vh;"/>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/F2IQV3U.png" align="right" class="icon" style="margin-top: 0vh;"/>
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="toiletries" class="text-input" placeholder="$8.30" style="margin-top: 5vh;"/>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Arrow -->
+						<div class="other-arrow">
+							<center><a href="#food"><img src="http://i.imgur.com/VJlB2mp.png" class="arrows" /></a></center>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</div>
 
  		<!-- Food -->
 		<div class="page" id="food">
 
-			<input type="text" name="groceries" />
-			<input type="text" name="toiletries" />
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/SCEdhV0.png" align="right" class="icon" style="margin-top: 25vh;" />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="groceries" class="text-input" placeholder="$60.10" style="margin-top: 30vh;" />
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/Sa6nlWZ.png" align="right" class="icon" style="margin-top: 0vh;" />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="takeaways" class="text-input" placeholder="$15.65" style="margin-top: 5vh;" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Arrow -->
+						<div class="other-arrow">
+							<center><a href="#tech"><img src="http://i.imgur.com/VJlB2mp.png" class="arrows" /></a></center>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</div>
 
 		<!-- Technology -->
 		<div class="page" id="tech">
 
-			<input type="text" name="tech" />
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/eFLGBB2.png" align="right" class="icon" style="margin-top: 25vh;" />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="internet" class="text-input" placeholder="$10.00" style="margin-top: 30vh;" />
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/63GzinO.png" align="right" class="icon" style="margin-top: 0vh;" />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="cellphone" class="text-input" placeholder="$7.50" style="margin-top: 5vh;" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Arrow -->
+						<div class="other-arrow">
+							<center><a href="#fun"><img src="http://i.imgur.com/VJlB2mp.png" class="arrows" /></a></center>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</div>
 
 		<!-- Fun -->
 		<div class="page" id="fun">
 
-			<input type="text" name="fun" />
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/MubeMCe.png" align="right" class="icon" style="margin-top: 25vh;" />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="clothes" class="text-input" placeholder="$13.60" style="margin-top: 30vh;" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<img src="http://i.imgur.com/P6Z3mzm.png" align="right" class="icon" style="margin-top: 0vh;" />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="leisure" class="text-input" placeholder="$31.60" style="margin-top: 5vh;" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Arrow -->
+						<div class="other-arrow">
+							<center><a href="#see-results"><img src="http://i.imgur.com/VJlB2mp.png" class="arrows" /></a></center>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</div>
 
