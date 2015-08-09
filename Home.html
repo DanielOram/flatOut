@@ -126,24 +126,29 @@ Icon credit:
 		font-family: 'Roboto Slab', serif;
 		font-size: 18px;
 		color: #ed7a67;
-		margin-top: 45vh;
+		margin-top: 1vh;
 	}
 
 	.dropdown-input {
-		width: 200px;
+		width: 300px;
 		height: 30px;
 		background-color: #ededed;
 		border: solid 1px #ededed;
 		font-family: 'Roboto Slab', serif;
 		font-size: 18px;
 		color: #ed7a67;
-		margin-top: 45vh;
+		margin-top: 1vh;
 	}
 
 	.icon {
 		width: 100px;
 		text-align: right;
 		margin-top: 45vh;
+	}
+
+	.iconText{
+		text-align: left;
+		margin-top: 41vh;
 	}
 
 	.return {
@@ -166,7 +171,7 @@ Icon credit:
 	}
 
 	.arrows {
-		margin-top: calc(100vh - 500px);
+		margin-top: calc(92vh - 500px);
 		height: 70px;
 	}
 
@@ -244,7 +249,11 @@ Icon credit:
 
 	.logo {
 		width: 100px;
+		display: block;
+    	margin-left: auto;
+    	margin-right: auto;
 	}
+
 
 div.panel {
 		margin: auto;
@@ -281,8 +290,8 @@ div.panel {
 						<div class="title">
 							<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 								<div class="flipper">
-									<div class="front">
-										<center><img src="http://i.imgur.com/UuV1Q8J.png" class="logo" /></center>
+									<div class="front" class="center-block">
+										<img src="http://i.imgur.com/UuV1Q8J.png" class="logo" />
 										<h1>flatOut</h1>
 									</div>
 									<div class="back">
@@ -315,12 +324,16 @@ div.panel {
 					<div class="col-md-6">
 						<img src="http://i.imgur.com/ifInGjc.png" align="right" class="icon" style="margin-top: 40vh;" />
 					</div>
+					
 					<div class="col-md-6">
-						<select class="dropdown-input">
-							<option value="0"></option>
-							<option value="UOA">University of Auckland - City Campus</option>
-							<option value="AUT">Auckland University of Technology - City Campus</option>
-						</select>
+						<div>
+							<p class="iconText">University</p>
+							<select class="dropdown-input">
+								<option value="0"></option>
+								<option value="UOA">University of Auckland - City Campus</option>
+								<option value="AUT">Auckland University of Technology - City Campus</option>
+							</select>
+						</div>
 					</div>
 				</div>
 
@@ -345,7 +358,10 @@ div.panel {
 						<img src="http://i.imgur.com/EysQChl.png" align="right" class="icon" style="margin-top: 40vh;" />
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="budget" class="text-input" placeholder="$367.70" />
+						<div>
+							<p class="iconText">Weekly Budget</p>
+							<input type="text" name="budget" class="text-input" placeholder="$367.70" />
+						</div>
 					</div>
 				</div>
 
@@ -371,15 +387,22 @@ div.panel {
 						<img src="http://i.imgur.com/It77T8T.png" align="right" class="icon" style="margin-top: 15vh;" />
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="power" class="text-input" placeholder="$15.10" style="margin-top: 20vh;" />
+					<div>
+						<p class="iconText" style="margin-top: 16vh">Power</p>
+						<input type="text" name="power" class="text-input" placeholder="$15.10" style="margin-top: 1vh;" />
+					</div>
 					</div>
 				</div>
-								<div class="row">
+								
+				<div class="row">
 					<div class="col-md-6">
 						<img src="http://i.imgur.com/hQOQtxM.png" align="right" class="icon" style="margin-top: 0vh;" />
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="transport" class="text-input" placeholder="$40.85" style="margin-top: 5vh;"/>
+					<div>
+						<p class="iconText" style="margin-top: 2vh">Transport</p>
+						<input type="text" name="transport" class="text-input" placeholder="$40.85" style="margin-top: 1vh;"/>
+					</div>
 					</div>
 				</div>
 								<div class="row">
@@ -387,7 +410,10 @@ div.panel {
 						<img src="http://i.imgur.com/F2IQV3U.png" align="right" class="icon" style="margin-top: 0vh;"/>
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="toiletries" class="text-input" placeholder="$8.30" style="margin-top: 5vh;"/>
+					<div>
+						<p class="iconText" style="margin-top: 2vh">Toilertries</p>
+						<input type="text" name="toiletries" class="text-input" placeholder="$8.30" style="margin-top: 1vh;"/>
+					</div>
 					</div>
 				</div>
 
@@ -413,15 +439,22 @@ div.panel {
 						<img src="http://i.imgur.com/SCEdhV0.png" align="right" class="icon" style="margin-top: 25vh;" />
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="groceries" class="text-input" placeholder="$60.10" style="margin-top: 30vh;" />
+						<div>
+							<p class="iconText" style="margin-top: 25vh;">Groceries</p>
+							<input type="text" name="groceries" class="text-input" placeholder="$60.10" style="margin-top: 1vh;" />
+						</div>
 					</div>
 				</div>
-								<div class="row">
+				
+				<div class="row">
 					<div class="col-md-6">
 						<img src="http://i.imgur.com/Sa6nlWZ.png" align="right" class="icon" style="margin-top: 0vh;" />
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="takeaways" class="text-input" placeholder="$15.65" style="margin-top: 5vh;" />
+						<div>
+							<p class="iconText" style="margin-top: 1vh;">Takeaways</p>
+							<input type="text" name="takeaways" class="text-input" placeholder="$15.65" style="margin-top: 1vh;" />
+						</div>
 					</div>
 				</div>
 
@@ -447,7 +480,10 @@ div.panel {
 						<img src="http://i.imgur.com/eFLGBB2.png" align="right" class="icon" style="margin-top: 25vh;" />
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="internet" class="text-input" placeholder="$10.00" style="margin-top: 30vh;" />
+						<div>
+							<p class="iconText" style="margin-top: 27vh;">Internet</p>
+							<input type="text" name="internet" class="text-input" placeholder="$10.00" style="margin-top: 1vh;" />
+						</div>
 					</div>
 				</div>
 								<div class="row">
@@ -455,7 +491,10 @@ div.panel {
 						<img src="http://i.imgur.com/63GzinO.png" align="right" class="icon" style="margin-top: 0vh;" />
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="cellphone" class="text-input" placeholder="$7.50" style="margin-top: 5vh;" />
+						<div>
+							<p class="iconText" style="margin-top: 1vh;">Cellphone</p>
+							<input type="text" name="cellphone" class="text-input" placeholder="$7.50" style="margin-top: 1vh;" />
+						</div>
 					</div>
 				</div>
 
@@ -481,7 +520,10 @@ div.panel {
 						<img src="http://i.imgur.com/MubeMCe.png" align="right" class="icon" style="margin-top: 25vh;" />
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="clothes" class="text-input" placeholder="$13.60" style="margin-top: 30vh;" />
+						<div>
+							<p class="iconText" style="margin-top: 27vh">Clothing</p>
+							<input type="text" name="clothes" class="text-input" placeholder="$13.60" style="margin-top: 1vh;" />
+						</div>
 					</div>
 				</div>
 				<div class="row">
@@ -489,7 +531,10 @@ div.panel {
 						<img src="http://i.imgur.com/P6Z3mzm.png" align="right" class="icon" style="margin-top: 0vh;" />
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="leisure" class="text-input" placeholder="$31.60" style="margin-top: 5vh;" />
+						<div>
+							<p class="iconText" style="margin-top: 3vh">Leisure</p>
+							<input type="text" name="leisure" class="text-input" placeholder="$31.60" style="margin-top: 1vh;" />
+						</div>
 					</div>
 				</div>
 

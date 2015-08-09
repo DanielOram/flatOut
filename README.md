@@ -1,5 +1,3 @@
-# Nimbl_Hackfest
+# flatOut
 
-##Repository for Team Nimbl for Summer of Tech Hackfest!
-
-###Empty repository so far.
+## Find student flats fast.
