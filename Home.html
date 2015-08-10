@@ -50,7 +50,10 @@ Icon credit:
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-		
+	
+    <script type="text/javascript" src="/main.js"></script>
+
+
     <script type="text/javascript" language="javascript">
    
    		//Bounce animation for arrow
@@ -87,24 +90,7 @@ Icon credit:
 	        });
 	    });
 
-        var weeklyCostValue = 30.00;
-        var budget = 1.00;
-        var leftovers = 1.00;
-
-        function addValues() {
-			budget = document.getElementById('weeklyBudget').value;
-			weeklyCostValue  = document.getElementById('power').value;
-			weeklyCostValue += document.getElementById('transport').value;
-			weeklyCostValue += document.getElementById('toiletries').value;
-			weeklyCostValue += document.getElementById('groceries').value;
-			weeklyCostValue += document.getElementById('takeaways').value;
-			weeklyCostValue += document.getElementById('internet').value;
-			weeklyCostValue += document.getElementById('cellphone').value;
-			weeklyCostValue += document.getElementById('clothing').value;
-			weeklyCostValue += document.getElementById('leisure').value;
-			leftovers = budget - weeklyCostValue;
-			Console.log(leftovers);
-        };
+        
 
     </script>
 
