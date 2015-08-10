@@ -87,6 +87,25 @@ Icon credit:
 	        });
 	    });
 
+        var weeklyCostValue = 30.00;
+        var budget = 1.00;
+        var leftovers = 1.00;
+
+        function addValues() {
+			budget = document.getElementById('weeklyBudget').value;
+			weeklyCostValue  = document.getElementById('power').value;
+			weeklyCostValue += document.getElementById('transport').value;
+			weeklyCostValue += document.getElementById('toiletries').value;
+			weeklyCostValue += document.getElementById('groceries').value;
+			weeklyCostValue += document.getElementById('takeaways').value;
+			weeklyCostValue += document.getElementById('internet').value;
+			weeklyCostValue += document.getElementById('cellphone').value;
+			weeklyCostValue += document.getElementById('clothing').value;
+			weeklyCostValue += document.getElementById('leisure').value;
+			leftovers = budget - weeklyCostValue;
+			Console.log(leftovers);
+        };
+
     </script>
 
 	<title>flatOut</title>
@@ -328,7 +347,7 @@ div.panel {
 					<div class="col-md-6">
 						<div>
 							<p class="iconText">University</p>
-							<select class="dropdown-input">
+							<select class="dropdown-input" id="uni">
 								<option value="0"></option>
 								<option value="UOA">University of Auckland - City Campus</option>
 								<option value="AUT">Auckland University of Technology - City Campus</option>
@@ -360,7 +379,7 @@ div.panel {
 					<div class="col-md-6">
 						<div>
 							<p class="iconText">Weekly Budget</p>
-							<input type="text" name="budget" class="text-input" placeholder="$367.70" />
+							<input type="text" name="budget" class="text-input" placeholder="$367.70" id="weeklyBudget" />
 						</div>
 					</div>
 				</div>
@@ -389,7 +408,7 @@ div.panel {
 					<div class="col-md-6">
 					<div>
 						<p class="iconText" style="margin-top: 16vh">Power</p>
-						<input type="text" name="power" class="text-input" placeholder="$15.10" style="margin-top: 1vh;" />
+						<input type="text" name="power" class="text-input" placeholder="$15.10" style="margin-top: 1vh;" id="power" />
 					</div>
 					</div>
 				</div>
@@ -401,7 +420,7 @@ div.panel {
 					<div class="col-md-6">
 					<div>
 						<p class="iconText" style="margin-top: 2vh">Transport</p>
-						<input type="text" name="transport" class="text-input" placeholder="$40.85" style="margin-top: 1vh;"/>
+						<input type="text" id="transport" name="transport" class="text-input" placeholder="$40.85" style="margin-top: 1vh;"/>
 					</div>
 					</div>
 				</div>
@@ -411,8 +430,8 @@ div.panel {
 					</div>
 					<div class="col-md-6">
 					<div>
-						<p class="iconText" style="margin-top: 2vh">Toilertries</p>
-						<input type="text" name="toiletries" class="text-input" placeholder="$8.30" style="margin-top: 1vh;"/>
+						<p class="iconText" style="margin-top: 2vh">Toiletries</p>
+						<input type="text" id="toiletries" name="toiletries" class="text-input" placeholder="$8.30" style="margin-top: 1vh;"/>
 					</div>
 					</div>
 				</div>
@@ -441,7 +460,7 @@ div.panel {
 					<div class="col-md-6">
 						<div>
 							<p class="iconText" style="margin-top: 25vh;">Groceries</p>
-							<input type="text" name="groceries" class="text-input" placeholder="$60.10" style="margin-top: 1vh;" />
+							<input type="text" id="groceries" name="groceries" class="text-input" placeholder="$60.10" style="margin-top: 1vh;" />
 						</div>
 					</div>
 				</div>
@@ -453,7 +472,7 @@ div.panel {
 					<div class="col-md-6">
 						<div>
 							<p class="iconText" style="margin-top: 1vh;">Takeaways</p>
-							<input type="text" name="takeaways" class="text-input" placeholder="$15.65" style="margin-top: 1vh;" />
+							<input type="text" id="takeaways" name="takeaways" class="text-input" placeholder="$15.65" style="margin-top: 1vh;" />
 						</div>
 					</div>
 				</div>
@@ -482,7 +501,7 @@ div.panel {
 					<div class="col-md-6">
 						<div>
 							<p class="iconText" style="margin-top: 27vh;">Internet</p>
-							<input type="text" name="internet" class="text-input" placeholder="$10.00" style="margin-top: 1vh;" />
+							<input type="text" id="internet" name="internet" class="text-input" placeholder="$10.00" style="margin-top: 1vh;" />
 						</div>
 					</div>
 				</div>
@@ -493,7 +512,7 @@ div.panel {
 					<div class="col-md-6">
 						<div>
 							<p class="iconText" style="margin-top: 1vh;">Cellphone</p>
-							<input type="text" name="cellphone" class="text-input" placeholder="$7.50" style="margin-top: 1vh;" />
+							<input type="text" id="cellphone" name="cellphone" class="text-input" placeholder="$7.50" style="margin-top: 1vh;" />
 						</div>
 					</div>
 				</div>
@@ -522,7 +541,7 @@ div.panel {
 					<div class="col-md-6">
 						<div>
 							<p class="iconText" style="margin-top: 27vh">Clothing</p>
-							<input type="text" name="clothes" class="text-input" placeholder="$13.60" style="margin-top: 1vh;" />
+							<input type="text" id="clothing" name="clothes" class="text-input" placeholder="$13.60" style="margin-top: 1vh;" />
 						</div>
 					</div>
 				</div>
@@ -533,7 +552,7 @@ div.panel {
 					<div class="col-md-6">
 						<div>
 							<p class="iconText" style="margin-top: 3vh">Leisure</p>
-							<input type="text" name="leisure" class="text-input" placeholder="$31.60" style="margin-top: 1vh;" />
+							<input type="text" id="leisure" name="leisure" class="text-input" placeholder="$31.60" style="margin-top: 1vh;" />
 						</div>
 					</div>
 				</div>
