@@ -2,6 +2,13 @@ var estimatedWeeklyCosts = 202.70; //place holders (these are the default values
 var weeklyBudget = 367.70; // place holder
 var leftovers = 165.00; // place holder
 var fieldIDs = ['weeklyBudget', 'power', 'transport', 'toiletries', 'groceries', 'takeaways', 'internet', 'cellphone', 'clothing', 'leisure']; //IDs of the text fields
+var submitButton = null;
+
+document.addEventListener('DOMContentLoaded', function () { //Ensure everything is loaded before this runs
+	submitButton = document.getElementById('submit');
+	submitButton.addEventListener('click', calculateBudgetLeftovers);
+});
+
 
 
 function calculateBudgetLeftovers() {
@@ -23,12 +30,13 @@ function calculateBudgetLeftovers() {
 			str  = document.getElementById(fieldIDs[i]).placeholder.substring(1); 
 	
 		cost  = parseFloat(str); // Getting a number from our string
-			
-
-		estimatedWeeklyCosts += cost;
+		
+		estimatedWeeklyCosts = (100*cost) + estimatedWeeklyCosts; // The random *100 is to stop some bugs with adding floating point numbers
 		
 	};
+
 	
-	leftovers = weeklyBudget - estimatedWeeklyCosts;
+	leftovers = weeklyBudget - (estimatedWeeklyCosts/100);
+	
 	console.log(leftovers);
 };
