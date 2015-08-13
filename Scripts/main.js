@@ -32,11 +32,9 @@ function calculateBudgetLeftovers() {
 		cost  = parseFloat(str); // Getting a number from our string
 		
 		estimatedWeeklyCosts = (100*cost) + estimatedWeeklyCosts; // The random *100 is to stop some bugs with adding floating point numbers
-		
-	};
 
-	
+}
 	leftovers = weeklyBudget - (estimatedWeeklyCosts/100);
 	
 	console.log(leftovers);
-};
+}

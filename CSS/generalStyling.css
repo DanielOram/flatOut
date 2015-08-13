@@ -1,0 +1,179 @@
+/* Fonts */
+
+h1 {
+    font-family: 'Armata', serif;
+    font-size: 36px;
+    color: #ededed;
+    text-align: center;
+}
+
+p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ededed;
+    text-align: center;
+}
+
+/* General */
+
+.page {
+    width: 100%;
+    height: 100vh;
+    background-color: #4ee6a7;
+}
+
+.text-input {
+    width: 200px;
+    height: 30px;
+    background-color: #ededed;
+    border: solid 1px #ededed;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    color: #ed7a67;
+    margin-top: 1vh;
+}
+
+.dropdown-input {
+    width: 300px;
+    height: 30px;
+    background-color: #ededed;
+    border: solid 1px #ededed;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    color: #ed7a67;
+    margin-top: 1vh;
+}
+
+.icon {
+    width: 100px;
+    text-align: right;
+    margin-top: 45vh;
+}
+
+.iconText{
+    text-align: left;
+    margin-top: 41vh;
+}
+
+.return {
+    width: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.see-results {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #4ee6a7;
+}
+
+/* Arrow */
+
+.arrow {
+    margin-top: calc(100vh - 100px);
+    height: 70px;
+}
+
+.arrows {
+    margin-top: calc(92vh - 500px);
+    height: 70px;
+}
+
+.front-arrow {
+    width: 100%;
+}
+
+.other-arrow {
+    width: 100%;
+}
+
+/* Flipper */
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 320px;
+    height: 140px;
+    margin: auto;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 1s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+
+/* Home */
+
+.title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    line-height: 14px;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.logo {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+div.panel {
+    margin: auto;
+    margin-top: 20px;
+    border-style: none;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+div.panel-body {
+    background-color:#ededed;
+
+}
+
+div.panel-heading {
+    background-color:#4ee6a7;
+
+}
