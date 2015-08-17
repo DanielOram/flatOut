@@ -59,7 +59,6 @@ $(document).ready(function() {
 	//process csv data from AverageLivingCosts.csv
 	readCSV("AverageLivingCosts.csv", function (data) {
 		process_ALC_data(data);
-		alert("finished");
 		setDefaultLivingCostValues();
 	});
 
